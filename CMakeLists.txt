@@ -137,8 +137,8 @@ endif()
 if(PNG_HARDWARE_OPTIMIZATIONS)
 
 # Set definitions and sources for ARM.
-if(PNG_TARGET_ARCHITECTURE MATCHES "^(arm|aarch)")
-  if(PNG_TARGET_ARCHITECTURE MATCHES "^(arm64|aarch64)")
+if(PNG_TARGET_ARCHITECTURE MATCHES "(arm|aarch)")
+  if(PNG_TARGET_ARCHITECTURE MATCHES "(arm64|aarch64)")
     set(PNG_ARM_NEON_POSSIBLE_VALUES on off)
     set(PNG_ARM_NEON "on"
         CACHE STRING "Enable ARM NEON optimizations: on|off; on is default")
